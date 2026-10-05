@@ -12,6 +12,9 @@ move = {
     walk_spd: 1.5,
     drag: .12,
     jump_spd: -5,
+    jump_drag: 2.5,
+    jumps: 2,
+    max_jumps: 2,
     facing: 1
 }
 
@@ -44,3 +47,12 @@ player_sprite[states.ATTACK]         = s_player_attack;
 player_sprite[states.BLOCK]          = s_player_block;
 player_sprite[states.CROUCH]         = s_player_crouch;
 player_sprite[states.CROUCH_BLOCK]   = s_player_crouch_block;
+
+// mask array
+player_mask[states.IDLE]           = s_player_idle;
+player_mask[states.WALK]           = s_player_idle;
+player_mask[states.JUMP]           = s_player_idle;
+player_mask[states.ATTACK]         = s_player_idle;
+player_mask[states.BLOCK]          = s_player_idle;
+player_mask[states.CROUCH]         = s_player_crouch;
+player_mask[states.CROUCH_BLOCK]   = s_player_crouch;

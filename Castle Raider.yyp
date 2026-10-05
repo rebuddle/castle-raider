@@ -28,6 +28,7 @@
   "name":"Castle Raider",
   "resources":[
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
+    {"id":{"name":"obj_player_particles","path":"objects/obj_player_particles/obj_player_particles.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"rm_00","path":"rooms/rm_00/rm_00.yy",},},
     {"id":{"name":"_macros","path":"scripts/_macros/_macros.yy",},},
@@ -39,6 +40,8 @@
     {"id":{"name":"s_player_block","path":"sprites/s_player_block/s_player_block.yy",},},
     {"id":{"name":"s_player_crouch_block","path":"sprites/s_player_crouch_block/s_player_crouch_block.yy",},},
     {"id":{"name":"s_player_crouch","path":"sprites/s_player_crouch/s_player_crouch.yy",},},
+    {"id":{"name":"s_player_dust_jump","path":"sprites/s_player_dust_jump/s_player_dust_jump.yy",},},
+    {"id":{"name":"s_player_dust_land","path":"sprites/s_player_dust_land/s_player_dust_land.yy",},},
     {"id":{"name":"s_player_idle","path":"sprites/s_player_idle/s_player_idle.yy",},},
     {"id":{"name":"s_player_jump","path":"sprites/s_player_jump/s_player_jump.yy",},},
     {"id":{"name":"s_player_walk","path":"sprites/s_player_walk/s_player_walk.yy",},},
