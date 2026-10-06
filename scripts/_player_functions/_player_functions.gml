@@ -1,3 +1,8 @@
+/*
+ *  HELPER FUNCTIONS FOR THE PLAYER
+ * 
+*/
+
 
 function _player_get_input(){
     // keyboard input

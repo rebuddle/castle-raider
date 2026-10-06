@@ -1,12 +1,11 @@
+/*
+ * FINITE STATE MACHINE HANDLER
+ * 
+*/
+
 
 function FSM_player_idle(){
     //show_debug_message("[Player] - IDLE STATE");
-    // get input
-    _player_get_input();
-    
-    // calc movement
-    _player_calc_movement();
-    
     // check state
     if (move.hsp!=0) {
         state = states.WALK;
@@ -26,21 +25,10 @@ function FSM_player_idle(){
         state = states.CROUCH;
         move.hsp = 0;
     }
-    
-    // apply movement
-    _player_apply_movement();
-    
-    // apply animation
-    _player_animations();
 }
 
 function FSM_player_walk(){
     //show_debug_message("[Player] - WALK STATE");
-    // get input
-    _player_get_input();
-    
-    // calc movement
-    _player_calc_movement();
     
     // check if falling off ledge
     var side = bbox_bottom;
@@ -71,21 +59,10 @@ function FSM_player_walk(){
         state = states.CROUCH;
         move.hsp = 0;
     }
-    
-    // apply movement
-    _player_apply_movement();
-    
-    // apply animation
-    _player_animations();
 }
 
 function FSM_player_attack(){
     //show_debug_message("[Player] - ATTACK STATE");
-    // get input
-    _player_get_input();
-    
-    // calc movement
-    _player_calc_movement();
     
     // check state
     var image_speed_alt = sprite_get_speed(sprite_index)/game_get_speed(gamespeed_fps);
@@ -103,21 +80,10 @@ function FSM_player_attack(){
     
     // enable smaller jumps
     if move.vsp < 0 and !input.jump_held move.vsp = max(move.vsp, move.jump_spd/move.jump_drag); // bug with different jump height
-        
-    // apply movement
-    _player_apply_movement();
-    
-    // apply animation
-    _player_animations();
 }
 
 function FSM_player_jump(){
     //show_debug_message("[Player] - JUMP STATE");
-    // get input
-    _player_get_input();
-    
-    // calc movement
-    _player_calc_movement();
     
     // check state
     if _player_on_ground() {
@@ -142,21 +108,10 @@ function FSM_player_jump(){
     
     // enable smaller jumps
     if move.vsp < 0 and !input.jump_held move.vsp = max(move.vsp, move.jump_spd/move.jump_drag); // bug with different jump height
-    
-    // apply movement
-    _player_apply_movement();
-    
-    // apply animation
-    _player_animations();
 }
 
 function FSM_player_block(){
     //show_debug_message("[Player] - BLOCK STATE");
-    // get input
-    _player_get_input();
-    
-    // calc movement
-    _player_calc_movement();
     
     // check state
     _player_block_check();
@@ -167,21 +122,10 @@ function FSM_player_block(){
     if input.jump {
          _player_jump();
     }
-    
-    // apply movement
-    _player_apply_movement();
-    
-    // apply animation
-    _player_animations();
 }
 
 function FSM_player_crouch(){
     //show_debug_message("[Player] - CROUCH STATE");
-    // get input
-    _player_get_input();
-    
-    // calc movement
-    _player_calc_movement();
     
     // check state
     _player_block_check();
@@ -192,21 +136,10 @@ function FSM_player_crouch(){
     if input.jump {
         _player_jump();
     }
-    
-    // apply movement
-    _player_apply_movement();
-    
-    // apply animation
-    _player_animations();
 }
 
 function FSM_player_crouch_block(){
     //show_debug_message("[Player] - CROUCH_BLOCK STATE");
-    // get input
-    _player_get_input();
-    
-    // calc movement
-    _player_calc_movement();
     
     // check state
     _player_block_check();
@@ -217,10 +150,4 @@ function FSM_player_crouch_block(){
     if input.jump {
         _player_jump();
     }
-    
-    // apply movement
-    _player_apply_movement();
-    
-    // apply animation
-    _player_animations();
 }

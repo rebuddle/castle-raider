@@ -1,3 +1,6 @@
+
+
+// draw sprite
 draw_self();
 
 // show bounding box
