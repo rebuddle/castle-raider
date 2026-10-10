@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"_macros",
+  "%Name":"scr_player_states",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"_macros",
+  "name":"scr_player_states",
   "parent":{
-    "name":"Configuration",
-    "path":"folders/Data/Configuration.yy",
+    "name":"Scripts",
+    "path":"folders/Gameplay/Player/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

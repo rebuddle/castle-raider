@@ -1,8 +1,7 @@
-
-// _player_inputs
+// player_inputs
 input = {}
 
-// _player_movements
+// player_movements
 move = {
     hsp: 0,
     vsp: 0,
@@ -40,19 +39,19 @@ player_step[states.CROUCH]         = FSM_player_crouch;
 player_step[states.CROUCH_BLOCK]   = FSM_player_crouch_block;
 
 // sprites array
-player_sprite[states.IDLE]           = s_player_idle;
-player_sprite[states.WALK]           = s_player_walk;
-player_sprite[states.JUMP]           = s_player_jump;
-player_sprite[states.ATTACK]         = s_player_attack;
-player_sprite[states.BLOCK]          = s_player_block;
-player_sprite[states.CROUCH]         = s_player_crouch;
-player_sprite[states.CROUCH_BLOCK]   = s_player_crouch_block;
+player_sprite[states.IDLE]           = spr_player_idle;
+player_sprite[states.WALK]           = spr_player_walk;
+player_sprite[states.JUMP]           = spr_player_jump;
+player_sprite[states.ATTACK]         = spr_player_attack;
+player_sprite[states.BLOCK]          = spr_player_block;
+player_sprite[states.CROUCH]         = spr_player_crouch;
+player_sprite[states.CROUCH_BLOCK]   = spr_player_crouch_block;
 
 // mask array
-player_mask[states.IDLE]           = s_player_idle;
-player_mask[states.WALK]           = s_player_idle;
-player_mask[states.JUMP]           = s_player_idle;
-player_mask[states.ATTACK]         = s_player_idle;
-player_mask[states.BLOCK]          = s_player_idle;
-player_mask[states.CROUCH]         = s_player_crouch;
-player_mask[states.CROUCH_BLOCK]   = s_player_crouch;
+player_mask[states.IDLE]           = spr_player_idle;
+player_mask[states.WALK]           = spr_player_idle;
+player_mask[states.JUMP]           = spr_player_idle;
+player_mask[states.ATTACK]         = spr_player_idle;
+player_mask[states.BLOCK]          = spr_player_idle;
+player_mask[states.CROUCH]         = spr_player_crouch;
+player_mask[states.CROUCH_BLOCK]   = spr_player_crouch;
